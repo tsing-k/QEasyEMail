@@ -52,6 +52,16 @@ QString QSmtpClient::getLastError()
     return mLastError;
 }
 
+void QSmtpClient::clear()
+{
+    mToList.clear();
+    mCcList.clear();
+    mBCcList.clear();
+    mContent.clear();
+    mSubject.clear();
+    mLastError.clear();
+}
+
 void QSmtpClient::initCommonServers()
 {
     mServerInfos[ServerType::NTES_126] = ServerInfo("smtp.126.com", 25);

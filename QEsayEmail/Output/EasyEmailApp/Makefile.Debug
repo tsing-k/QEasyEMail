@@ -14,10 +14,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_NEEDS_QMAIN
 CFLAGS        = -fno-keep-inline-dllexport -g -Wall -W -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -g -std=gnu++11 -Wall -W -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\..\EasyEmailApp -I. -I..\..\QSmtpClient -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtWidgets -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtGui -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtANGLE -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtCore -Idebug -I. -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\mkspecs\win32-g++ 
+INCPATH       = -I..\..\EasyEmailApp -I. -I..\..\QSmtpClient -I..\..\QPop3Client -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtWidgets -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtGui -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtANGLE -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\include\QtCore -Idebug -I. -IC:\Qt\Qt5.11.1\5.11.1\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,windows -mthreads
-LIBS        =        -lmingw32 -LC:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libqtmaind.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.6.11-win32\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 -LD:\GitHub\QEasyEMail\QEsayEmail\Output\QSmtpClient\debug -lQSmtpClient C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Cored.a 
+LIBS        =        -lmingw32 -LC:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libqtmaind.a -LC:\openssl\lib -LC:\Utils\my_sql\mysql-5.6.11-win32\lib -LC:\Utils\postgresql\pgsql\lib -lshell32 -LD:\GitHub\QEasyEMail\QEsayEmail\Output\QSmtpClient\debug -lQSmtpClient -LD:\GitHub\QEasyEMail\QEsayEmail\Output\QPop3Client\debug -lQPop3Client C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Widgetsd.a C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Guid.a C:\Qt\Qt5.11.1\5.11.1\mingw53_32\lib\libQt5Cored.a 
 QMAKE         = C:\Qt\Qt5.11.1\5.11.1\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
@@ -212,7 +212,7 @@ debug/moc_mainwindow.cpp: C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets/QMa
 		../../EasyEmailApp/mainwindow.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/bin/moc.exe
-	C:\Qt\Qt5.11.1\5.11.1\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/mkspecs/win32-g++ -ID:/GitHub/QEasyEMail/QEsayEmail/EasyEmailApp -ID:/GitHub/QEasyEMail/QEsayEmail/QSmtpClient -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtGui -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore -I. -IC:/Qt/Qt5.11.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Qt5.11.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\..\EasyEmailApp\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\Qt5.11.1\5.11.1\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/mkspecs/win32-g++ -ID:/GitHub/QEasyEMail/QEsayEmail/EasyEmailApp -ID:/GitHub/QEasyEMail/QEsayEmail/QSmtpClient -ID:/GitHub/QEasyEMail/QEsayEmail/QPop3Client -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtGui -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore -I. -IC:/Qt/Qt5.11.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Qt5.11.1/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.11.1/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward ..\..\EasyEmailApp\mainwindow.h -o debug\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -481,7 +481,15 @@ debug/mainwindow.o: ../../EasyEmailApp/mainwindow.cpp ../../EasyEmailApp/mainwin
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets/QWidget \
 		../../QSmtpClient/qsmtpclient.h \
 		../../QSmtpClient/qsmtpclient_global.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QStringList
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QStringList \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QMap \
+		../../QPop3Client/qpop3client.h \
+		../../QPop3Client/qpop3client_global.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QDateTime \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets/QMessageBox \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\..\EasyEmailApp\mainwindow.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 

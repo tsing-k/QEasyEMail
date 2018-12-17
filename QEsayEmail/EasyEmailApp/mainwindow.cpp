@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <qsmtpclient.h>
+#include <qpop3client.h>
 #include <QDateTime>
 #include <QMessageBox>
 
@@ -11,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+#if 0
     QSmtpClient smtpClient(QSmtpClient::ServerType::NTES_126, "onlylinker@126.com", "Linker");
     smtpClient.setSubject("测试SMTP");
     smtpClient.setContent(getTestHtml(), QSmtpClient::SmtpFormat::Html);
@@ -24,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         QMessageBox::warning(this, "Send", "Send mail failed with " + smtpClient.getLastError() + "!");
     }
+#endif
+    QPop3Client pop3Client(QPop3Client::ServerType::NTES_126, "onlylinker@126.com", "Linker");
 }
 
 MainWindow::~MainWindow()

@@ -1,15 +1,16 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-12-17T09:31:30
+# Project created by QtCreator 2018-12-17T13:04:31
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       -= gui
+QT       += network
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+TARGET = QPop3Client
+TEMPLATE = lib
 
-TARGET = EasyEmailApp
-TEMPLATE = app
+DEFINES += QPOP3CLIENT_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -22,21 +23,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp
+        qpop3client.cpp
 
 HEADERS += \
-        mainwindow.h
+        qpop3client.h \
+        qpop3client_global.h 
 
-FORMS += \
-        mainwindow.ui
-
-LIBS += \
-        -L$$OUT_PWD/../QSmtpClient/debug/ -lQSmtpClient \
-        -L$$OUT_PWD/../QPop3Client/debug/ -lQPop3Client
-
-INCLUDEPATH += \
-        $$PWD/../QSmtpClient \
-        $$PWD/../QPop3Client
+unix {
+    target.path = /usr/lib
+    INSTALLS += target
+}
