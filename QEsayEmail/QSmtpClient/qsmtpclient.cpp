@@ -14,6 +14,13 @@ QSmtpClient::QSmtpClient(const QString &server, quint16 port, const QString &use
 {
 }
 
+QSmtpClient::QSmtpClient(ServerType serverType, const QString &user, const QString &password)
+{
+    initCommonServers();
+    ServerInfo info = mServerInfos.value(serverType);
+    new (this)QSmtpClient(info.serverName, info.port, user, password);
+}
+
 void QSmtpClient::addReceiver(const QString &to)
 {
     mToList.append(to);
@@ -43,6 +50,20 @@ bool QSmtpClient::sendMail()
 QString QSmtpClient::getLastError()
 {
     return mLastError;
+}
+
+void QSmtpClient::initCommonServers()
+{
+    mServerInfos[ServerType::NTES_126] = ServerInfo("smtp.126.com", 25);
+    mServerInfos[ServerType::NTES_163] = ServerInfo("smtp.163.com", 25);
+    mServerInfos[ServerType::NTES_Yeah_Net] = ServerInfo("smtp.yeah.net", 25);
+    mServerInfos[ServerType::CMCC_139] = ServerInfo("smtp.139.com", 25);
+    mServerInfos[ServerType::ALi] = ServerInfo("smtp.qiye.aliyun.com", 25);
+    mServerInfos[ServerType::QQ] = ServerInfo("smtp.qq.com", 25);
+    mServerInfos[ServerType::Sina] = ServerInfo("smtp.sina.com", 25);
+    mServerInfos[ServerType::Sina_Vip] = ServerInfo("smtp.vip.sina.com", 25);
+    mServerInfos[ServerType::Yahoo] = ServerInfo("smtp.mail.yahoo.cn", 25);
+    mServerInfos[ServerType::GMail] = ServerInfo("smtp.gmail.com", 25);
 }
 
 void QSmtpClient::addCC(const QString &cc)

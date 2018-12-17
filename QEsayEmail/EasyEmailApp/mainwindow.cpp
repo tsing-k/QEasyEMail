@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSmtpClient smtpClient("smtp.126.com", 25, "onlylinker@126.com", "Linker");
+    QSmtpClient smtpClient(QSmtpClient::ServerType::NTES_126, "onlylinker@126.com", "Linker");
     smtpClient.setSubject("测试SMTP");
     smtpClient.setContent(getTestHtml(), QSmtpClient::SmtpFormat::Html);
     smtpClient.addReceiver("co.du@dct-china.cn");

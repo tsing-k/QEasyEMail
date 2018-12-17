@@ -159,7 +159,12 @@ debug/qsmtpclient.o: ../../QSmtpClient/qsmtpclient.cpp ../../QSmtpClient/qsmtpcl
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qbytearraylist.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qregexp.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qstringmatcher.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QObject \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QMap \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qmap.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qdebug.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qhash.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qtextstream.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qiodevice.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qobject.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qobjectdefs.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qobjectdefs_impl.h \
@@ -169,16 +174,6 @@ debug/qsmtpclient.o: ../../QSmtpClient/qsmtpclient.cpp ../../QSmtpClient/qsmtpcl
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qvarlengtharray.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qcontainerfwd.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qobject_impl.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/QTcpSocket \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtcpsocket.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtnetworkglobal.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtnetwork-config.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qabstractsocket.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qiodevice.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qdebug.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qhash.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qmap.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qtextstream.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qlocale.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qvariant.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qshareddata.h \
@@ -188,9 +183,14 @@ debug/qsmtpclient.o: ../../QSmtpClient/qsmtpclient.cpp ../../QSmtpClient/qsmtpcl
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qcontiguouscache.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qsharedpointer.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QObject \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/QTcpSocket \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtnetworkglobal.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qtnetwork-config.h \
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtNetwork/qabstractsocket.h \
 		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QDateTime \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qdatetime.h \
-		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/QMap
+		C:/Qt/Qt5.11.1/5.11.1/mingw53_32/include/QtCore/qdatetime.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\qsmtpclient.o ..\..\QSmtpClient\qsmtpclient.cpp
 
 ####### Install
